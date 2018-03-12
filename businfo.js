@@ -12,7 +12,7 @@ $(document).ready( function(){
 
 
 function updateInfo61W(){
-    console.log('running...');
+    console.log('1running...');
      // Load data from metro transit api
      var metroTransitAPI = 'https://svc.metrotransit.org/NexTrip/' + '11797';
      $.getJSON( metroTransitAPI, { format: 'json' }).done(function( data ) {
@@ -57,7 +57,7 @@ function updateInfo61W(){
 }
 
 function updateInfo61E(){
-    console.log('running...');
+    console.log('2running...');
      // Load data from metro transit api
      var metroTransitAPI = 'https://svc.metrotransit.org/NexTrip/' + '12382';
      $.getJSON( metroTransitAPI, { format: 'json' }).done(function( data ) {
