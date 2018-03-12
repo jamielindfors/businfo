@@ -14,7 +14,7 @@ $(document).ready( function(){
 function updateInfo61W(){
     console.log('1running...');
      // Load data from metro transit api
-     var metroTransitAPI = 'https://svc.metrotransit.org/NexTrip/' + '13806';
+     var metroTransitAPI = 'https://svc.metrotransit.org/NexTrip/' + '11797';
      $.getJSON( metroTransitAPI, { format: 'json' }).done(function( data ) {
          var nextbus=0; //Pick which coming bus to display, 0=1st.
          var minutes_Departure=data[nextbus].DepartureText;
