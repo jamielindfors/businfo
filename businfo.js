@@ -87,11 +87,16 @@ function updateInfo61E(){
         console.log('data from ajax call', data);
         
         // Put on the web page
-        $('h4').text(data[nextbus].Route);
-        $('h5').text(data[nextbus].RouteDirection.substring(0,4));
-        $('h6').text(minutes_Departure+" minutes");
-        
-             
+        $('h1').text(data[nextbus].Route);
+        $('h2').text(data[nextbus].RouteDirection.substring(0,4));
+        if(data[nextbus].DepartureText=='Due'){
+            $('h3').text("Due");
+        }
+        else
+        {
+            $('h3').text(minutes_Departure+" minutes");
+        }
+    
         
     })
 }
