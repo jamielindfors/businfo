@@ -18,7 +18,7 @@ function updateInfo61W(){
      $.getJSON( metroTransitAPI, { format: 'json' }).done(function( data ) {
          var nextbus=0; //Pick which coming bus to display, 0=1st.
          var minutes_Departure=data[nextbus].DepartureText;
-         console.log('minutes_Departure', minutes_Departure);
+         console.log('1minutes_Departure', minutes_Departure);
          if (data[nextbus].Actual==true){
               minutes_Departure=minutes_Departure.substring(0,minutes_Departure.indexOf(" "));  
         }
@@ -63,7 +63,7 @@ function updateInfo61E(){
      $.getJSON( metroTransitAPI, { format: 'json' }).done(function( data ) {
          var nextbus=0; //Pick which coming bus to display, 0=1st.
          var minutes_Departure=data[nextbus].DepartureText;
-         console.log('minutes_Departure', minutes_Departure);
+         console.log('2minutes_Departure', minutes_Departure);
          if (data[nextbus].Actual==true){
               minutes_Departure=minutes_Departure.substring(0,minutes_Departure.indexOf(" "));  
         }
