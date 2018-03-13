@@ -18,7 +18,7 @@ $(document).ready( function(){
 function updateInfo61W(){
     console.log('running...');
      // Load data from metro transit api
-     var metroTransitAPI = 'https://svc.metrotransit.org/NexTrip/' + '13806';
+     var metroTransitAPI = 'http://svc.metrotransit.org/NexTrip/' + '13806';
      $.getJSON( metroTransitAPI, { format: 'json' }).done(function( data ) {
          var nextbus=0; //Pick which coming bus to display, 0=1st.
          var minutes_Departure=data[nextbus].DepartureText;
@@ -46,14 +46,13 @@ function updateInfo61W(){
         console.log('data from ajax call', data);
         
         // Put on the web page
-        $('p1').text(data[nextbus].Route);
-        $('p2').text(data[nextbus].RouteDirection.substring(0,4));
+        $('p1').text(data[nextbus].Route+data[nextbus].RouteDirection.substring(0,1));
         if(data[nextbus].DepartureText=='Due'){
-            $('p3').text("Due");
+            $('p2').text("Due");
         }
         else
         {
-            $('p3').text(minutes_Departure+" minutes");
+            $('p2').text(minutes_Departure+" min");
         }
     
         
@@ -62,7 +61,7 @@ function updateInfo61W(){
 function updateInfo61E(){
     console.log('running...');
      // Load data from metro transit api
-     var metroTransitAPI = 'https://svc.metrotransit.org/NexTrip/' + '12382';
+     var metroTransitAPI = 'http://svc.metrotransit.org/NexTrip/' + '12382';
      $.getJSON( metroTransitAPI, { format: 'json' }).done(function( data ) {
          var nextbus=0; //Pick which coming bus to display, 0=1st.
          var minutes_Departure=data[nextbus].DepartureText;
@@ -89,16 +88,15 @@ function updateInfo61E(){
         console.log('minutes_Departure', minutes_Departure);
         console.log('data from ajax call', data);
         
-        // Put on the web page
-        $('p4').text(data[nextbus].Route);
-        $('p5').text(data[nextbus].RouteDirection.substring(0,4));
-        if(data[nextbus].DepartureText=='Due'){
-            $('p6').text("Due");
-        }
-        else
-        {
-            $('p6').text(minutes_Departure+" minutes");
-        }
+       // Put on the web page
+       $('p3').text(data[nextbus].Route+data[nextbus].RouteDirection.substring(0,1));
+       if(data[nextbus].DepartureText=='Due'){
+           $('p4').text("Due");
+       }
+       else
+       {
+           $('p4').text(minutes_Departure+" min");
+       }
     
         
     })
@@ -106,7 +104,7 @@ function updateInfo61E(){
 function updateInfo64W(){
     console.log('running...');
      // Load data from metro transit api
-     var metroTransitAPI = 'https://svc.metrotransit.org/NexTrip/' + '11798';
+     var metroTransitAPI = 'http://svc.metrotransit.org/NexTrip/' + '11798';
      $.getJSON( metroTransitAPI, { format: 'json' }).done(function( data ) {
          var nextbus=0; //Pick which coming bus to display, 0=1st.
          var minutes_Departure=data[nextbus].DepartureText;
@@ -134,14 +132,13 @@ function updateInfo64W(){
         console.log('data from ajax call', data);
         
         // Put on the web page
-        $('p7').text(data[nextbus].Route);
-        $('p8').text(data[nextbus].RouteDirection.substring(0,4));
+        $('p5').text(data[nextbus].Route+data[nextbus].RouteDirection.substring(0,1));
         if(data[nextbus].DepartureText=='Due'){
-            $('p9').text("Due");
+            $('p6').text("Due");
         }
         else
         {
-            $('p9').text(minutes_Departure+" minutes");
+            $('p6').text(minutes_Departure+" min");
         }
     
         
@@ -150,7 +147,7 @@ function updateInfo64W(){
 function updateInfo64E(){
     console.log('running...');
      // Load data from metro transit api
-     var metroTransitAPI = 'https://svc.metrotransit.org/NexTrip/' + '11797';
+     var metroTransitAPI = 'http://svc.metrotransit.org/NexTrip/' + '11797';
      $.getJSON( metroTransitAPI, { format: 'json' }).done(function( data ) {
          var nextbus=0; //Pick which coming bus to display, 0=1st.
          var minutes_Departure=data[nextbus].DepartureText;
@@ -178,14 +175,13 @@ function updateInfo64E(){
         console.log('data from ajax call', data);
         
         // Put on the web page
-        $('p10').text(data[nextbus].Route);
-        $('p11').text(data[nextbus].RouteDirection.substring(0,4));
+        $('p7').text(data[nextbus].Route+data[nextbus].RouteDirection.substring(0,1));
         if(data[nextbus].DepartureText=='Due'){
-            $('p12').text("Due");
+            $('p8').text("Due");
         }
         else
         {
-            $('p12').text(minutes_Departure+" minutes");
+            $('p8').text(minutes_Departure+" min");
         }
     
         
