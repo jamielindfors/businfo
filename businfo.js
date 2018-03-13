@@ -18,7 +18,7 @@ $(document).ready( function(){
 function updateInfo61W(){
     console.log('running...');
      // Load data from metro transit api
-     var metroTransitAPI = 'http://svc.metrotransit.org/NexTrip/' + '13806';
+     var metroTransitAPI = 'https://svc.metrotransit.org/NexTrip/' + '13806';
      $.getJSON( metroTransitAPI, { format: 'json' }).done(function( data ) {
          var nextbus=0; //Pick which coming bus to display, 0=1st.
          var minutes_Departure=data[nextbus].DepartureText;
@@ -61,7 +61,7 @@ function updateInfo61W(){
 function updateInfo61E(){
     console.log('running...');
      // Load data from metro transit api
-     var metroTransitAPI = 'http://svc.metrotransit.org/NexTrip/' + '12382';
+     var metroTransitAPI = 'https://svc.metrotransit.org/NexTrip/' + '12382';
      $.getJSON( metroTransitAPI, { format: 'json' }).done(function( data ) {
          var nextbus=0; //Pick which coming bus to display, 0=1st.
          var minutes_Departure=data[nextbus].DepartureText;
@@ -104,7 +104,7 @@ function updateInfo61E(){
 function updateInfo64W(){
     console.log('running...');
      // Load data from metro transit api
-     var metroTransitAPI = 'http://svc.metrotransit.org/NexTrip/' + '11798';
+     var metroTransitAPI = 'https://svc.metrotransit.org/NexTrip/' + '11798';
      $.getJSON( metroTransitAPI, { format: 'json' }).done(function( data ) {
          var nextbus=0; //Pick which coming bus to display, 0=1st.
          var minutes_Departure=data[nextbus].DepartureText;
@@ -147,7 +147,7 @@ function updateInfo64W(){
 function updateInfo64E(){
     console.log('running...');
      // Load data from metro transit api
-     var metroTransitAPI = 'http://svc.metrotransit.org/NexTrip/' + '11797';
+     var metroTransitAPI = 'https://svc.metrotransit.org/NexTrip/' + '11797';
      $.getJSON( metroTransitAPI, { format: 'json' }).done(function( data ) {
          var nextbus=0; //Pick which coming bus to display, 0=1st.
          var minutes_Departure=data[nextbus].DepartureText;
