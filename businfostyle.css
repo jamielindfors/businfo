@@ -10,9 +10,18 @@
 
     
 }
+
+.mainClass span {
+    background-color: green;
+}
+
 .cellClass {
     text-align:left
 }
+.cellClass span {
+    background-color:rgba(255, 255, 255, 0.342);
+}
+
 
 
 .stopClass {
@@ -22,21 +31,35 @@
     padding:-50px;
     margin-top:0%;
     margin-bottom:0%;
-  
-    
 
     
 }
+.stopClass span {
+    background-color:rgba(255, 255, 255, 0.342);
+}
+
+
+
+.mainClass span {
+    background-color:rgba(255, 255, 255, 0.342);
+}
+
+
 .mainClass2 {
-    color:rgb(189, 67, 158);
+    color:rgb(10, 0, 8);
     font-size:60px;
+}
+.mainClass2 span {
+    background-color:rgba(255, 255, 255, 0.342);
 }
 
 
 .p {
     font-family: "Times New Roman", Times, serif;
     font-size:80px;
-    color:rgb(189, 67, 158);
+    color:rgb(255, 255, 255);
+
+    
 }
 
 

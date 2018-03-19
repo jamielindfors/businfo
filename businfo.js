@@ -45,15 +45,16 @@ function updateInfo61W(){
         console.log('minutes_Departure', minutes_Departure);
         console.log('data from ajax call', data);
         
-        // Put on the web page
-        $('p1').text(data[nextbus].Route+data[nextbus].RouteDirection.substring(0,1));
-        if(data[nextbus].DepartureText=='Due'){
-            $('p2').text("Due");
-        }
-        else
-        {
-            $('p2').text(minutes_Departure+" min");
-        }
+         // Put on the web page
+         $('p1').html("<span>"+data[nextbus].Route+data[nextbus].RouteDirection.substring(0,1)+"</span>");
+         if(data[nextbus].DepartureText=='Due'){
+             $('p2').html("<span>"+"Due"+"</span>");
+         }
+         else
+         {
+             $('p2').html("<span>"+minutes_Departure+" min"+"</span>");
+         }
+     
     
         
     })
@@ -89,14 +90,15 @@ function updateInfo61E(){
         console.log('data from ajax call', data);
         
        // Put on the web page
-       $('p3').text(data[nextbus].Route+data[nextbus].RouteDirection.substring(0,1));
+       $('p3').html("<span>"+data[nextbus].Route+data[nextbus].RouteDirection.substring(0,1)+"</span>");
        if(data[nextbus].DepartureText=='Due'){
-           $('p4').text("Due");
+           $('p4').html("<span>"+"Due"+"</span>");
        }
        else
        {
-           $('p4').text(minutes_Departure+" min");
+           $('p4').html("<span>"+minutes_Departure+" min"+"</span>");
        }
+   
     
         
     })
@@ -132,13 +134,13 @@ function updateInfo64W(){
         console.log('data from ajax call', data);
         
         // Put on the web page
-        $('p5').text(data[nextbus].Route+data[nextbus].RouteDirection.substring(0,1));
+        $('p5').html("<span>"+data[nextbus].Route+data[nextbus].RouteDirection.substring(0,1)+"</span>");
         if(data[nextbus].DepartureText=='Due'){
-            $('p6').text("Due");
+            $('p6').html("<span>"+"Due"+"</span>");
         }
         else
         {
-            $('p6').text(minutes_Departure+" min");
+            $('p6').html("<span>"+minutes_Departure+" min"+"</span>");
         }
     
         
@@ -174,15 +176,16 @@ function updateInfo64E(){
         console.log('minutes_Departure', minutes_Departure);
         console.log('data from ajax call', data);
         
-        // Put on the web page
-        $('p7').text(data[nextbus].Route+data[nextbus].RouteDirection.substring(0,1));
-        if(data[nextbus].DepartureText=='Due'){
-            $('p8').text("Due");
-        }
-        else
-        {
-            $('p8').text(minutes_Departure+" min");
-        }
+       // Put on the web page
+       $('p7').html("<span>"+data[nextbus].Route+data[nextbus].RouteDirection.substring(0,1)+"</span>");
+       if(data[nextbus].DepartureText=='Due'){
+           $('p8').html("<span>"+"Due"+"</span>");
+       }
+       else
+       {
+           $('p8').html("<span>"+minutes_Departure+" min"+"</span>");
+       }
+   
     
         
     })
